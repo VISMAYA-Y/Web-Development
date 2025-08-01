@@ -1,0 +1,116 @@
+/* Background Stars */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  background-color: black;
+}
+
+.stars, .twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  display: block;
+  z-index: -2;
+  background-repeat: repeat;
+  animation: moveStars 300s linear infinite;
+}
+
+.stars {
+  background: url('https://i.imgur.com/Oo6zj9G.png'); /* white stars */
+}
+
+.twinkling {
+  background: url('https://i.imgur.com/KbgxFgM.png'); /* pink sparkles */
+  z-index: -1;
+  animation: twinkle 180s linear infinite;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+@keyframes twinkle {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
+}
+
+/* Title Glow */
+.title {
+  font-size: 3rem;
+  color: #ffb6c1;
+  margin-top: 40px;
+  text-shadow: 0 0 12px #ff69b4, 0 0 25px #ff1493;
+  text-align: center;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 8px #ff69b4; }
+  100% { text-shadow: 0 0 20px #ff1493; }
+}
+
+/* Video Grid */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Video Box Styles */
+.video-box {
+  width: 300px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-box:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 35px rgba(255, 105, 180, 0.9);
+}
+
+.video-box::before {
+  content: "▶";
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 15px #ff69b4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ✅ Watched tick styling */
+.video-box.watched::after {
+  content: "✅";
+  font-size: 1.8rem;
+  color: #00ffae;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  text-shadow: 0 0 10px #00ffae;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .video-box {
+    width: 90vw;
+    height: 200px;
+  }
+}
