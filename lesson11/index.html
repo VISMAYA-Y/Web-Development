@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style> 
+        /* element selector */
+        div{
+            /* background-color: beige; */
+        }
+        /* class selctor  */
+        .red {
+            background-color: rgb(247, 180, 193);
+        }
+        /* id selector  */
+        #green{
+            background-color: rgb(180, 249, 249);
+        }
+        /* child selector  */
+        div > p {
+            background-color: rgb(245, 168, 245);
+        }
+        div p{
+            background-color: rgb(172, 172, 255);
+        }
+        /* universal selector  */
+            a:visited{
+            color: #ff085a
+        }
+
+        a:link {
+            color: rgb(240, 102, 233);
+        }
+
+        a:active{
+            background-color: rgb(81, 16, 16);
+        }
+
+        a:hover{
+            background-color: rgb(101, 144, 239);
+        }
+
+        /*  something  to selct fiest child  */
+        p:first-child{
+            background-color: black;
+            color:aliceblue
+        }
+    </style>
+</head>
+<body>
+    <p> me iam blackkkkkkk</p>
+    <div class="red"> 
+                hellooooooooooo
+    </div>
+
+    <div> 
+        <article>
+            <p>iam now black </p>
+        <p> iam barbie doll </p>
+            </article> 
+    </div>
+    <div id="green">
+        I am another div
+    </div>
+   <a href="https://www.instagram.com">www.instagram.com </a>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+      body {
+        font-family: 'Courier New', monospace;
+        background-color: #c5aeae;
+        padding: 20px;
+      }
+      code {
+        background-color: #f4f4f4;
+        color: #d314a9;
+        display: block;
+        padding: 10px;
+        border-left: 4px solid #ea153f;
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: pre-wrap;
+      }
